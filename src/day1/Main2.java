@@ -6,7 +6,7 @@ import java.math.BigInteger;
 public class Main2 {
 
     public static void main(String[] args) {
-        Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("100000000")));
+        Thread thread = new Thread(new LongComputationTask(new BigInteger("2"), new BigInteger("10")));
 
         thread.start();
         thread.interrupt();
