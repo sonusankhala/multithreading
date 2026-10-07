@@ -71,9 +71,60 @@ Another is by implementing java.lang.Runnable interface
 
 ...
 
+## 4. Thread Life Cycle
 
-...
+A thread goes through different states during its lifetime, from the time it is created until it finishes execution.
 
-## 8. Common Interview Questions
+Java provides the `Thread.State` enum to represent the state of a thread.
 
-...
+### Thread States
+
+A Java thread can be in one of the following six states:
+
+1. `NEW`
+2. `RUNNABLE`
+3. `BLOCKED`
+4. `WAITING`
+5. `TIMED_WAITING`
+6. `TERMINATED`
+
+---
+
+### Thread Life Cycle
+
+```text
+                    Thread Created
+                         |
+                         ↓
+                       NEW
+                         |
+                      start()
+                         |
+                         ↓
+                    RUNNABLE
+                   /    |     \
+                  /     |      \
+                 ↓      ↓       ↓
+             BLOCKED  WAITING  TIMED_WAITING
+                 \      |       /
+                  \     |      /
+                   \    |     /
+                    ↓   ↓    ↓
+                    RUNNABLE
+                       |
+                       ↓
+                   TERMINATED
+
+```
+RUNNING is not a separate state in Java's Thread.State enum.
+A thread that is actually executing is considered to be in the RUNNABLE state.
+
+Important Difference: BLOCKED vs WAITING vs TIMED_WAITING
+
+These three states are frequently asked in interviews.
+
+| State | Meaning | Common Causes |
+|---|---|---|
+| `BLOCKED` | Waiting to acquire a monitor lock | `synchronized` |
+| `WAITING` | Waiting indefinitely for another thread to perform an action | `Object.wait()`, `Thread.join()`, `LockSupport.park()` |
+| `TIMED_WAITING` | Waiting for a specified amount of time | `Thread.sleep()`, `Object.wait(timeout)`, `Thread.join(timeout)` |
