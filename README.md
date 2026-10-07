@@ -71,19 +71,6 @@ Another is by implementing java.lang.Runnable interface
 
 ...
 
-## 4. Thread Life Cycle
-
-...
-
-## 5. Thread Methods
-
-...
-
-## 6. Synchronization
-
-...
-
-## 7. Inter-Thread Communication
 
 ...
 
