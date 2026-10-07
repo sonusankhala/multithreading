@@ -60,14 +60,14 @@ One is by extending java.lang.Thread class
 Another is by implementing java.lang.Runnable interface
 
 ### 3.1 Extending Thread
-👉 [Extending Thread Example – TaskExample.java](src/sankhala.multithread.ExtendeThread.java)
+👉 [Extending Thread Example](src/sankhala/multithread.ExtendeThread.java)
 
 ...
 
 ### 3.2 Implementing Runnable
-👉 [Implementing Runnable Example – TaskExample.java](src/sankhala.multithread.RunnableThread.java)
+👉 [Implementing Runnable Example](src/sankhala/multithread.RunnableThread.java)
 
-👉 [Implementing using Lambda Example – TaskExample.java](src/sankhala.multithread.LambdaThread.java)
+👉 [Implementing using Lambda Example](src/sankhala/multithread.LambdaThread.java)
 
 ...
 
