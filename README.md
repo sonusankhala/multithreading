@@ -66,6 +66,7 @@ Another is by implementing java.lang.Runnable interface
 
 ### 3.2 Implementing Runnable
 👉 [Implementing Runnable Example – TaskExample.java](src/multithreading/TaskExample.java)
+👉 [Implementing using Lambda Example – TaskExample.java](src/multithreading/TaskExample.java)
 
 ...
 
