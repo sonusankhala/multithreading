@@ -49,7 +49,7 @@ public class Main {
         thread.start();
     }
 }
-
+```
 ...
 
 ## 3. Creating a Thread
