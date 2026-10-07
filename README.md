@@ -1,14 +1,83 @@
-# Multithreading in Java
+# Java Multithreading
 
+## Table of Contents
 
+1. [Introduction](#1-introduction)
+2. [What is a Thread?](#2-what-is-a-thread)
+3. [Creating a Thread](#3-creating-a-thread)
+4. [Thread Life Cycle](#4-thread-life-cycle)
+5. [Thread Methods](#5-thread-methods)
+6. [Synchronization](#6-synchronization)
+7. [Inter-Thread Communication](#7-inter-thread-communication)
+8. [Common Interview Questions](#8-common-interview-questions)
 
-📘 1. Introduction
+---
 
-Multi-threading refers to establishing multiple concurrent flows of execution control within a single program environment.
+## 1. Introduction
 
-Core Advantages
+Multithreading is a Java feature that allows multiple threads
+to execute concurrently within a program.
 
-1. Resource Maximization: When one thread blocks (e.g., waiting for Network I/O or File access), another thread grabs the CPU rather than letting it sit idle.
-2. Concurrent Problem Modeling: Complex applications can run animation, sound streams, document rendering, and background downloads simultaneously.
-[!NOTE]
-Java threads are lightweight processes that execute inside the same memory space. This allows seamless inter-thread communications since objects can access shared states directly without hefty OS-level context switching overhead.
+### Why do we need Multithreading?
+
+- Better CPU utilization
+- Improved application responsiveness
+- Parallel execution of independent tasks
+- Useful for server-side applications
+
+---
+
+## 2. What is a Thread?
+
+A thread is the smallest unit of execution within a process.
+
+### Example
+
+```java
+class MyThread extends Thread {
+
+    @Override
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        MyThread thread = new MyThread();
+        thread.start();
+    }
+}
+
+...
+
+## 3. Creating a Thread
+
+### 3.1 Extending Thread
+
+...
+
+### 3.2 Implementing Runnable
+
+...
+
+## 4. Thread Life Cycle
+
+...
+
+## 5. Thread Methods
+
+...
+
+## 6. Synchronization
+
+...
+
+## 7. Inter-Thread Communication
+
+...
+
+## 8. Common Interview Questions
+
+...
