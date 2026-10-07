@@ -1,4 +1,4 @@
-#Multithreading in Java
+# Multithreading in Java
 
 ****Introduction********: Multi-threading means multiple flow of control. Multi-threading programming is a conceptual paradigm for programming where one can divide a program into two or more processes which can be run in parallel. There are two main advantages of multi-threading : Fist, program with multiple threads will, in general, result in better utilization of system resources, including the CPU, because another line of execution can grab the CPU when one line of execution is blocked. Second, there are several problems better solved by multiple threads. For example, we can easily write a multi-threaded program to show animation, play music, display documents, and down load files from the network at the same time.
 
