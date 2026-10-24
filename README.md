@@ -468,19 +468,19 @@ Java provides three important methods on `Object`:
 - `notify()`
 - `notifyAll()`
 
-### `wait()`
+#### `wait()`
 
 Causes the current thread to wait and releases the monitor of the object on which `wait()` is called.
 
-### `notify()`
+#### `notify()`
 
 Wakes one thread waiting on that object's monitor.
 
-### `notifyAll()`
+#### `notifyAll()`
 
 Wakes all threads waiting on that object's monitor. They must still compete to reacquire the monitor.
 
-### Example
+#### Example
 
 ```java
 class SharedResource {
@@ -504,7 +504,7 @@ class SharedResource {
 }
 ```
 
-### Important Rules
+#### Important Rules
 
 - Call `wait()`, `notify()`, and `notifyAll()` while owning the relevant object's monitor.
 - Otherwise, Java throws `IllegalMonitorStateException`.
@@ -513,11 +513,11 @@ class SharedResource {
 
 ---
 
-### What Is Deadlock?
+#### What Is Deadlock?
 
 A **deadlock** occurs when two or more threads wait indefinitely for resources or locks held by one another.
 
-### Example
+#### Example
 
 ```java
 public class DeadlockExample {
@@ -557,7 +557,7 @@ If `t1` acquires `LOCK_A` while `t2` acquires `LOCK_B`, each thread may wait for
 
 The program can then remain stuck.
 
-### How to Prevent Deadlock
+#### How to Prevent Deadlock
 
 1. Acquire multiple locks in a consistent global order.
 2. Avoid unnecessary locks.
@@ -565,7 +565,7 @@ The program can then remain stuck.
 4. Consider timed lock acquisition with `Lock.tryLock()` when appropriate.
 5. Avoid waiting indefinitely while holding locks.
 
-### How to Detect Deadlock
+#### How to Detect Deadlock
 
 A thread dump can help identify deadlocks.
 
@@ -581,7 +581,7 @@ Useful tools include:
 
 A **livelock** occurs when threads remain active and repeatedly respond to each other, but make no useful progress.
 
-### Deadlock vs Livelock
+#### Deadlock vs Livelock
 
 | Feature | Deadlock | Livelock |
 |---|---|---|
@@ -590,17 +590,17 @@ A **livelock** occurs when threads remain active and repeatedly respond to each 
 | Typical cause | Circular lock dependency | Repeated reactions or retries |
 | Possible solution | Change locking strategy/order | Change retry strategy or introduce backoff |
 
-### Example Scenario
+#### Example Scenario
 
 Two threads repeatedly give way to each other, each waiting for the other to proceed. They keep changing their state but never finish their tasks.
 
-## 11. What Is Starvation?
+### What Is Starvation?
 
 **Starvation** occurs when a thread is repeatedly denied the CPU or access to a resource and therefore makes little or no progress.
 
 It may happen because of unfair scheduling, excessive lock contention, or a thread repeatedly losing access to a shared resource.
 
-### How Is It Different From Deadlock?
+#### How Is It Different From Deadlock?
 
 In a deadlock, a group of threads is stuck waiting on one another. In starvation, other threads may continue executing while one thread is unable to make progress.
 
@@ -614,7 +614,7 @@ Synchronization helps maintain correctness, but excessive or poorly designed syn
 - **Starvation:** Some threads repeatedly fail to acquire resources.
 - **Reduced concurrency:** Unnecessarily large critical sections prevent independent work from running concurrently.
 
-### Best Practices
+#### Best Practices
 
 - Synchronize only where necessary.
 - Keep critical sections short.
@@ -625,7 +625,7 @@ Synchronization helps maintain correctness, but excessive or poorly designed syn
 
 ---
 
-### What Is the Difference Between `synchronized` and `Lock`?
+#### What Is the Difference Between `synchronized` and `Lock`?
 
 Java also provides explicit locking APIs through `java.util.concurrent.locks`.
 
@@ -638,7 +638,7 @@ Java also provides explicit locking APIs through `java.util.concurrent.locks`.
 | Flexibility | Simple and built into the language | More locking options |
 | Best use | Straightforward mutual exclusion | When advanced lock control is needed |
 
-### Example Using `ReentrantLock`
+#### Example Using `ReentrantLock`
 
 ```java
 import java.util.concurrent.locks.Lock;
