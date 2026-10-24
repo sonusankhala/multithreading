@@ -125,6 +125,7 @@ These three states are frequently asked in interviews.
 | `WAITING` | Waiting indefinitely for another thread to perform an action | `Object.wait()`, `Thread.join()`, `LockSupport.park()` |
 | `TIMED_WAITING` | Waiting for a specified amount of time | `Thread.sleep()`, `Object.wait(timeout)`, `Thread.join(timeout)` |
 
+---
 ## 5. Thread Method
 <img width="675" height="513" alt="image" src="https://github.com/user-attachments/assets/1932e319-cc28-4a40-b7b5-41661383aa32" />
 
