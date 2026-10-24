@@ -83,7 +83,7 @@ public class MonitorLock {
 
 		long end = System.currentTimeMillis();
 		System.out.println("Time taken ::" + (end - start));
-		System.out.println("List1: " + list1.size() + " ; List2: " + list2.size());
+		System.out.println("List1: " + list1.size() + "; List2: " + list2.size());
 	}
 
 }
