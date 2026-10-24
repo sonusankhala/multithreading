@@ -126,7 +126,7 @@ These three states are frequently asked in interviews.
 | `TIMED_WAITING` | Waiting for a specified amount of time | `Thread.sleep()`, `Object.wait(timeout)`, `Thread.join(timeout)` |
 
 ---
-## 5. Thread Method
+## 5. Thread Methods
 <img width="675" height="513" alt="image" src="https://github.com/user-attachments/assets/1932e319-cc28-4a40-b7b5-41661383aa32" />
 
 ----
