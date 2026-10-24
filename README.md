@@ -8,7 +8,7 @@
 4. [Thread Life Cycle](#4-thread-life-cycle)
 5. [Thread Methods](#5-thread-methods)
 6. [Synchronization](#6-synchronization)
-7. [Common Interview Questions](#8-common-interview-questions)
+7. [Common Interview Questions](#7-common-interview-questions)
 
 ---
 
